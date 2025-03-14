@@ -1,2 +1,2 @@
 # Better-Callc
-Narzędzie do obliczania popularnych wzorów matematycznych
+##Narzędzie do obliczania popularnych wzorów matematycznych
