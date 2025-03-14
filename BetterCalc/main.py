@@ -1,6 +1,7 @@
 import time
-def hello():
-    print("Better Calc by Wilq1PL\nVersion 1.1 alpha")
+verstion = "1.0 alpha"
+def hello(version):
+    print(f"Better Calc by Wilq1PL\nVersion {version}")
     time.sleep(1)
     choose_counting(selecting_menu())
 
@@ -66,4 +67,4 @@ def count_rectangle():
 def count_triangle():
     pass
 if __name__ == "__main__":
-    hello()
+    hello(verstion)
