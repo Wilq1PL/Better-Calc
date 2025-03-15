@@ -1,8 +1,6 @@
-import time
 version = "1.1 alpha"
 def hello(ver):
     print(f"Better Calc by Wilq1PL\nVersion {ver}")
-    time.sleep(1)
     choose_counting(selecting_menu())
 
 def is_number(value):
@@ -31,7 +29,6 @@ def selecting_menu():
         selection = int(selection)
         if 1 <= selection <= len(menu):  # Dynamiczna weryfikacja poprawnych opcji
             print(f"✅ Wybrano: {menu[selection - 1]}\n")
-            time.sleep(0.25)
             return selection
         else:
             print("❌ Podano nieistniejący numer opcji. Spróbuj ponownie.\n")
@@ -51,7 +48,6 @@ def count_rectangle():
             continue  # Powtarzamy pętlę
         else:
             print(f"Podano: x = {x}\n")
-            time.sleep(0.25)
             break
     while True:
         y = int(input("Podaj wymiary drugiego boku:"))
@@ -61,7 +57,6 @@ def count_rectangle():
             continue  # Powtarzamy pętlę
         else:
             print(f"Podano: y = {y}\n")
-            time.sleep(0.25)
             break
     print(f"Wynikiem działania jest:\n{x*y}")
 
@@ -74,7 +69,6 @@ def count_triangle():
             continue  # Powtarzamy pętlę
         else:
             print(f"Podano: x = {x}\n")
-            time.sleep(0.25)
             break
     while True:
         h = int(input("Podaj wymiary wysokości:"))
@@ -84,7 +78,6 @@ def count_triangle():
             continue  # Powtarzamy pętlę
         else:
             print(f"Podano: h = {h}\n")
-            time.sleep(0.25)
             break
     sum_xh = x * h
     print(f"Wynikiem działania jest:\n{sum_xh/2}")
