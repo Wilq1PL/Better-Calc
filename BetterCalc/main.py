@@ -1,11 +1,11 @@
 import time
 import math
 
-version = 1.0
+version = "1.0.1"
 status = "beta"
 
 def hello(ver):
-    print(f"Better Calc by Wilq1PL\nVersion {ver} {status}")
+    print(f"Better Calc by Wilq1PL\nv{ver}-{status}")
     time.sleep(1)
     choose_counting(selecting_menu())
 
