@@ -11,5 +11,10 @@ Aktualnie dostępne wzory to:
 - Pole koła
 
 Plany na przyszłość:
-- Dodać pola:
+- Dodać wzory na:
+  - gęstość
+  - prędkość
+  - czas
+  - drogę
+  - i wiele więcej
 
