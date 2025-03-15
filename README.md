@@ -9,3 +9,7 @@ Aktualnie dostępne wzory to:
 - Pole trójkąta
 - Pole trapezu
 - Pole koła
+
+Plany na przyszłość:
+- Dodać pola:
+
