@@ -1,19 +1,30 @@
 import time
-version = "1.1 alpha"
+import math
+
+version = 1.0
+status = "beta"
+
 def hello(ver):
-    print(f"Better Calc by Wilq1PL\nVersion {ver}")
+    print(f"Better Calc by Wilq1PL\nVersion {ver} {status}")
     time.sleep(1)
     choose_counting(selecting_menu())
 
 def is_number(value):
     try:
-        int(value)  # Sprawdzamy, czy da się przekonwertować na liczbę całkowitą
+        float(value)  # Sprawdzamy, czy da się przekonwertować na liczbę rzeczywistą
         return True
     except ValueError:
         return False
 
+def get_number(prompt):
+    while True:
+        value = input(prompt).strip()
+        if is_number(value):
+            return float(value)  # Zwrot wartości jako liczby rzeczywistej
+        print("❌ Podano niepoprawną wartość. Proszę wpisać liczbę.\n")
+
 def selecting_menu():
-    menu = ["Pole prostokąta", "Pole trójkąta", "Pole trapezu", "Pole koła"] #Lista dostępnych opcji
+    menu = ["Pole prostokąta", "Pole trójkąta", "Pole trapezu", "Pole koła"]
 
     def print_menu():
         print("\nWybierz opcję:")
@@ -24,70 +35,44 @@ def selecting_menu():
         print_menu()
         selection = input("Wybieram: ").strip()
 
-        if not is_number(selection):
-            print("❌ Podano niepoprawną wartość. Proszę wpisać numer opcji.\n")
-            continue  # Powtarzamy pętlę
+        if is_number(selection):
+            selection = int(selection)
+            if 1 <= selection <= len(menu):
+                print(f"✅ Wybrano: {menu[selection - 1]}\n")
+                time.sleep(0.25)
+                return selection
 
-        selection = int(selection)
-        if 1 <= selection <= len(menu):  # Dynamiczna weryfikacja poprawnych opcji
-            print(f"✅ Wybrano: {menu[selection - 1]}\n")
-            time.sleep(0.25)
-            return selection
-        else:
-            print("❌ Podano nieistniejący numer opcji. Spróbuj ponownie.\n")
+        print("❌ Podano niepoprawną wartość. Proszę wpisać numer opcji.\n")
 
 def choose_counting(selection):
     if selection == 1:
         count_rectangle()
     elif selection == 2:
         count_triangle()
+    elif selection == 3:
+        count_trapeze()
+    elif selection == 4:
+        count_circle()
 
 def count_rectangle():
-    while True:
-        x = int(input("Podaj wymiary pierwszego boku:"))
-
-        if not is_number(x):
-            print("❌ Podano niepoprawną wartość. Proszę wpisać liczbę.\n")
-            continue  # Powtarzamy pętlę
-        else:
-            print(f"Podano: x = {x}\n")
-            time.sleep(0.25)
-            break
-    while True:
-        y = int(input("Podaj wymiary drugiego boku:"))
-
-        if not is_number(y):
-            print("❌ Podano niepoprawną wartość. Proszę wpisać liczbę.\n")
-            continue  # Powtarzamy pętlę
-        else:
-            print(f"Podano: y = {y}\n")
-            time.sleep(0.25)
-            break
-    print(f"Wynikiem działania jest:\n{x*y}")
+    a = get_number("Podaj wymiary pierwszego boku: ")
+    b = get_number("Podaj wymiary drugiego boku: ")
+    print(f"Wynikiem działania jest:\n{a * b}")
 
 def count_triangle():
-    while True:
-        x = int(input("Podaj wymiary podstawy:"))
+    a = get_number("Podaj długość podstawy: ")
+    h = get_number("Podaj wysokość: ")
+    print(f"Wynikiem działania jest:\n{(a * h) / 2}")
 
-        if not is_number(x):
-            print("❌ Podano niepoprawną wartość. Proszę wpisać liczbę.\n")
-            continue  # Powtarzamy pętlę
-        else:
-            print(f"Podano: x = {x}\n")
-            time.sleep(0.25)
-            break
-    while True:
-        h = int(input("Podaj wymiary wysokości:"))
+def count_trapeze():
+    a = get_number("Podaj długość podstawy a: ")
+    b = get_number("Podaj długość podstawy b: ")
+    h = get_number("Podaj wysokość: ")
+    print(f"Wynikiem działania jest:\n{((a + b) * h) / 2}")
 
-        if not is_number(h):
-            print("❌ Podano niepoprawną wartość. Proszę wpisać liczbę.\n")
-            continue  # Powtarzamy pętlę
-        else:
-            print(f"Podano: h = {h}\n")
-            time.sleep(0.25)
-            break
-    sum_xh = x * h
-    print(f"Wynikiem działania jest:\n{sum_xh/2}")
+def count_circle():
+    r = get_number("Podaj promień koła: ")
+    print(f"Wynikiem działania jest:\n{math.pi * r ** 2}")
 
 if __name__ == "__main__":
     hello(version)
