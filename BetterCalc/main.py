@@ -1,7 +1,7 @@
 import time
-verstion = "1.0 alpha"
-def hello(version):
-    print(f"Better Calc by Wilq1PL\nVersion {version}")
+version = "1.1 alpha"
+def hello(ver):
+    print(f"Better Calc by Wilq1PL\nVersion {ver}")
     time.sleep(1)
     choose_counting(selecting_menu())
 
@@ -64,7 +64,30 @@ def count_rectangle():
             time.sleep(0.25)
             break
     print(f"Wynikiem działania jest:\n{x*y}")
+
 def count_triangle():
-    pass
+    while True:
+        x = int(input("Podaj wymiary podstawy:"))
+
+        if not is_number(x):
+            print("❌ Podano niepoprawną wartość. Proszę wpisać liczbę.\n")
+            continue  # Powtarzamy pętlę
+        else:
+            print(f"Podano: x = {x}\n")
+            time.sleep(0.25)
+            break
+    while True:
+        h = int(input("Podaj wymiary wysokości:"))
+
+        if not is_number(h):
+            print("❌ Podano niepoprawną wartość. Proszę wpisać liczbę.\n")
+            continue  # Powtarzamy pętlę
+        else:
+            print(f"Podano: h = {h}\n")
+            time.sleep(0.25)
+            break
+    sum_xh = x * h
+    print(f"Wynikiem działania jest:\n{sum_xh/2}")
+
 if __name__ == "__main__":
-    hello(verstion)
+    hello(version)
