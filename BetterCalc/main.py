@@ -1,7 +1,7 @@
 import time
 import math
 
-version = "1.0.1"
+version = "1.1.0"
 status = "beta"
 
 def hello(ver):
@@ -24,7 +24,7 @@ def get_number(prompt):
         print("❌ Podano niepoprawną wartość. Proszę wpisać liczbę.\n")
 
 def selecting_menu():
-    menu = ["Pole prostokąta", "Pole trójkąta", "Pole trapezu", "Pole koła"]
+    menu = ["Pole prostokąta", "Pole trójkąta", "Pole trapezu", "Pole koła", "Gęstość", "Masę", "Objętość", "Prędkość", "Czas", "Drogę"]
 
     def print_menu():
         print("\nWybierz opcję:")
@@ -47,32 +47,92 @@ def selecting_menu():
 def choose_counting(selection):
     if selection == 1:
         count_rectangle()
+
     elif selection == 2:
         count_triangle()
+
     elif selection == 3:
         count_trapeze()
+
     elif selection == 4:
         count_circle()
 
+    elif selection == 5:
+        count_density()
+
+    elif selection == 6:
+        count_mass()
+    elif selection == 7:
+        count_volume()
+
+    elif selection == 8:
+        count_velocity()
+
+    elif selection == 9:
+        count_time()
+
+    elif selection == 10:
+        count_street()
+
 def count_rectangle():
-    a = get_number("Podaj wymiary pierwszego boku: ")
-    b = get_number("Podaj wymiary drugiego boku: ")
-    print(f"Wynikiem działania jest:\n{a * b}")
+    a = get_number("Podaj wymiary pierwszego boku (w metrach): ")
+    b = get_number("Podaj wymiary drugiego boku (w metrach): ")
+    print(f"Wynikiem działania jest:\n{a * b}m")
+    time.sleep(10)
 
 def count_triangle():
-    a = get_number("Podaj długość podstawy: ")
-    h = get_number("Podaj wysokość: ")
-    print(f"Wynikiem działania jest:\n{(a * h) / 2}")
+    a = get_number("Podaj długość podstawy (w metrach): ")
+    h = get_number("Podaj wysokość (w metrach): ")
+    print(f"Wynikiem działania jest:\n{(a * h) / 2}m")
+    time.sleep(10)
 
 def count_trapeze():
-    a = get_number("Podaj długość podstawy a: ")
-    b = get_number("Podaj długość podstawy b: ")
-    h = get_number("Podaj wysokość: ")
-    print(f"Wynikiem działania jest:\n{((a + b) * h) / 2}")
+    a = get_number("Podaj długość podstawy a (w metrach): ")
+    b = get_number("Podaj długość podstawy b (w metrach): ")
+    h = get_number("Podaj wysokość (w metrach): ")
+    print(f"Wynikiem działania jest:\n{((a + b) * h) / 2}m")
+    time.sleep(10)
 
 def count_circle():
-    r = get_number("Podaj promień koła: ")
-    print(f"Wynikiem działania jest:\n{math.pi * r ** 2}")
+    r = get_number("Podaj promień koła (w metrach): ")
+    print(f"Wynikiem działania jest:\n{math.pi * r ** 2}m")
+    time.sleep(10)
+
+def count_density():
+    m = get_number("Podaj masę (w kilogramach): ")
+    V = get_number("Podaj objętość (w metrach sześciennych): ")
+    print(f"Wynikiem działania jest:\n{m / V}kg/m3")
+    time.sleep(10)
+
+def count_mass():
+    V = get_number("Podaj masę (w kilogramach): ")
+    d = get_number("Podaj gęstość (w kilogramach na metr sześcienny: ")
+    print(f"Wynikiem działania jest:\n{V * d}kg")
+    time.sleep(10)
+
+def count_volume():
+    m = get_number("Podaj masę (w kilogramach): ")
+    d = get_number("Podaj gęstość (w kilogramach na metr sześcienny): ")
+    print(f"Wynikiem działania jest:\n{m / d}m3")
+    time.sleep(10)
+
+def count_velocity():
+    s = get_number("Podaj drogę (w m): ")
+    t = get_number("Podaj czas (w s): ")
+    print(f"Wynikiem działania jest:\n{s / t}m/s")
+    time.sleep(10)
+
+def count_time():
+    s = get_number("Podaj drogę (w m): ")
+    v = get_number("Podaj średnią prędkość (w m/s): ")
+    print(f"Wynikiem działania jest:\n{s / v}s")
+    time.sleep(10)
+
+def count_street():
+    v = get_number("Podaj średnią prędkość (w m/s): ")
+    t = get_number("Podaj czas (w s): ")
+    print(f"Wynikiem działania jest:\n{v * t}m")
+    time.sleep(10)
 
 if __name__ == "__main__":
     hello(version)
