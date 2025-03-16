@@ -1,7 +1,7 @@
 import time
 import math
 
-version = "1.0.0"
+version = "1.0.1"
 status = "Full release"
 
 def hello(ver):
@@ -77,25 +77,25 @@ def choose_counting(selection):
 def count_rectangle():
     a = get_number("Podaj wymiary pierwszego boku (w metrach): ")
     b = get_number("Podaj wymiary drugiego boku (w metrach): ")
-    print(f"Wynikiem działania jest:\n{a * b}m")
+    print(f"Wynikiem działania jest:\n{a * b}m2")
     time.sleep(10)
 
 def count_triangle():
     a = get_number("Podaj długość podstawy (w metrach): ")
     h = get_number("Podaj wysokość (w metrach): ")
-    print(f"Wynikiem działania jest:\n{(a * h) / 2}m")
+    print(f"Wynikiem działania jest:\n{(a * h) / 2}m2")
     time.sleep(10)
 
 def count_trapeze():
     a = get_number("Podaj długość podstawy a (w metrach): ")
     b = get_number("Podaj długość podstawy b (w metrach): ")
     h = get_number("Podaj wysokość (w metrach): ")
-    print(f"Wynikiem działania jest:\n{((a + b) * h) / 2}m")
+    print(f"Wynikiem działania jest:\n{((a + b) * h) / 2}m2")
     time.sleep(10)
 
 def count_circle():
     r = get_number("Podaj promień koła (w metrach): ")
-    print(f"Wynikiem działania jest:\n{math.pi * r ** 2}m")
+    print(f"Wynikiem działania jest:\n{math.pi * r ** 2}m2")
     time.sleep(10)
 
 def count_density():
