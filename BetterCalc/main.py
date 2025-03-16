@@ -1,8 +1,8 @@
 import time
 import math
 
-version = "1.1.0"
-status = "beta"
+version = "1.0.0"
+status = "Full release"
 
 def hello(ver):
     print(f"Better Calc by Wilq1PL\nv{ver}-{status}")
