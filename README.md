@@ -16,4 +16,4 @@ Aktualnie dostępne wzory to:
 - Drogę
 
 Plany na przyszłość:
-- Dodać więce wzorów
+- Dodać więcej wzorów
