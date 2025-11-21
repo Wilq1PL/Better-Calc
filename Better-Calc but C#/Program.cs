@@ -34,7 +34,7 @@ namespace BetterCalc
 
     static class Messages
     {
-        public const string Version = "1.1.0 C#";
+        public const string Version = "3.1.0 C#";
         public const string Author = "Wilq1PL";
 
         // Change 'static readonly' to 'static' to avoid ENC0118 error during Edit and Continue
@@ -413,4 +413,5 @@ namespace BetterCalc
             }
         }
     }
+
 }
