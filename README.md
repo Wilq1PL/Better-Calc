@@ -1,6 +1,7 @@
-# **Better-Calc but C#**
-### Narzędzie do obliczania *popularnych* wzorów matematycznych ale w C# bo czemu nie!
-#### Wydanie: 0.1.0 C#-Full release
+# **Better-Calc**
+## Teraz w ***C#***
+### Narzędzie do obliczania *popularnych* wzorów matematycznych
+#### Wydanie: 3.1.1
 
 Aktualnie dostępne wzory to:
 - Dodawanie
@@ -11,6 +12,14 @@ Aktualnie dostępne wzory to:
 - Pole trójkąta
 - Pole trapezu
 - Pole koła
+- Obwód koła
+- Gęstość
+- Ciśnienie
+- Siła
+- Praca
+- Energia kinetyczna
+- Energia potencjalna
 
 Plany na przyszłość:
-- Dodać więcej wzorów
+- Dodać jeszcze więcej wzorów
+- Zrobić wersję w tkinter
