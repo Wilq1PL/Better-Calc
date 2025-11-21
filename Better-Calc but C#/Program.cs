@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Globalization;
 
-/* To jest wersja C# programu Better-Calc stworzona jedynie w celach treningowych
- * Dla najlepszych lepiej działającej wersji, proszę korzystać z wersji pythonowej
- * Jestem oryginalnym autorem obu wersji
+/* Przedmowa:
+ * Zmiana planów.
+ * Witajcie w najnowszej wersji Lepszego Kalkulatora tym razem w lepszym i szybszym języku C#!!!
+ * Miłego obliczania <3
  * I am very sorry for using AI, but I am horible C# programmer*/
 
 namespace BetterCalc
@@ -415,3 +416,4 @@ namespace BetterCalc
     }
 
 }
+
