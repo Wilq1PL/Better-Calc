@@ -1,7 +1,7 @@
 # **Better-Calc**
 ## Teraz w ***C#***
 ### Narzędzie do obliczania *popularnych* wzorów matematycznych
-#### Wydanie: 3.1.1
+#### Wydanie: 3.1.1 C#
 
 Aktualnie dostępne wzory to:
 - Dodawanie
