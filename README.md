@@ -1,6 +1,6 @@
 # **Better-Calc but C#**
 ### Narzędzie do obliczania *popularnych* wzorów matematycznych ale w C# bo czemu nie!
-#### Wydanie: 1.0.1-Full release
+#### Wydanie: 0.1.0 C#-Full release
 
 Aktualnie dostępne wzory to:
 - Dodawanie
