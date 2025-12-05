@@ -1,7 +1,7 @@
 # **Better-Calc**
 ### Narzędzie do obliczania *popularnych* wzorów matematycznych
 #### Wydanie: 1.0.1-Full release
-Link do pobrania **python 1.13.2**: https://www.python.org/downloads/release/python-3132/
+Link do pobrania [**Python'a**](https://www.python.org/downloads/)
 
 Aktualnie dostępne wzory to:
 - Pole prostokąta
